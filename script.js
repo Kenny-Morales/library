@@ -1,4 +1,4 @@
-let myLibrary = [];
+let myLibrary = [{title: 'Hobbit', author: 'Bobby', pages: 23, read: true}];
 
 function Book(title, author, pages, read) {
     this.title = title; 
@@ -16,11 +16,17 @@ function addBookToLibrary() {
 
     bookInput = new Book(titleInput, authorInput, pagesInput, readInput);
     myLibrary.push(bookInput);
-    console.log(myLibrary);
 }
 
 function libraryDisplay() {
-    
+    for (k = 0; k < myLibrary.length; k++)
+    {
+        console.log(myLibrary[k].title);
+        console.log(myLibrary[k].author);
+        console.log(myLibrary[k].pages);
+        console.log(myLibrary[k].read);
+        }
 }
 
 addBookToLibrary();
+libraryDisplay();
