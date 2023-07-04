@@ -1,7 +1,7 @@
-let myLibrary = [{title: 'Hobbit', author: 'Bobby', pages: 23, read: true}];
-
+let myLibrary = [{title: 'Kenny', author: 'Me', pages: 12, read: true}];
+''
 function Book(title, author, pages, read) {
-    this.title = title; 
+    this.title = title;
     this.author = author;
     this.pages = parseInt(pages);
     this.read = Boolean(read);
@@ -19,14 +19,12 @@ function addBookToLibrary() {
 }
 
 function libraryDisplay() {
-    for (k = 0; k < myLibrary.length; k++)
-    {
+    let container = document.getElementById('container');
+    for (k = 0; k < myLibrary.length; k++) {
         console.log(myLibrary[k].title);
-        console.log(myLibrary[k].author);
-        console.log(myLibrary[k].pages);
-        console.log(myLibrary[k].read);
-        }
+        let div = document.createElement('div');
+        container.appendChild(div);
+    }
 }
-
 addBookToLibrary();
 libraryDisplay();
